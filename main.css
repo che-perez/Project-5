@@ -1,0 +1,67 @@
+
+    *{
+        margin: 0;
+    }
+    
+    body {
+        background-color: black;
+    }
+    
+    .back {
+        background: url(back2.jpg)no-repeat;
+        width: 100%;
+        height: 800px;
+    }
+    
+    #storm{
+        width: 300px;
+        position: absolute;
+        top: 320px;
+        z-index: 1;
+    }
+    
+    .luke {
+        width: 300px;
+        position: relative;
+        left: 700px;
+        top: 230px;
+    }
+    
+    #las {
+        width: 100px;
+        height: 2px;
+        position: absolute;
+        top: 369px;
+        left: 140px;
+        background: darkred;
+        box-shadow: 3px 0px 3px 2px rgba(255,0,0,1);
+        
+    }
+    
+    .laser{
+        transform: rotate(90deg);
+    }
+    
+    #drop{
+        width: 500px;
+        position: absolute;
+        top: -500px;
+        left: -80px;
+        z-index: 2;
+       box-shadow: 3px 0px 3px 2px rgba(0,0,255,1);
+    }
+    
+.button {
+    position: absolute;
+    left: 50%;
+    top: 550px;
+}
+
+.fata{
+    position: absolute;
+    top: 200px;
+    left: 350px;
+    font-size: 50px;
+    color: red;
+    text-shadow: 3px 2px 3px 2px rgba(255,206,0,.5);
+}

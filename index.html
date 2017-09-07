@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Star Wars</title>
+        <link rel="stylesheet" type="text/css" href="main.css">
+    </head>
+    
+    <body>
+
+<div class="back">
+<h1 id="fata">FATALITY!!!!</h1>
+<img id="storm" class="trooper" src="stormLaser.png">
+<img class="luke" src="Luke.gif">
+<div id="las"></div>
+<button class="button" onclick="shoot()">Fight!</button>
+<audio id="bang" src="laser_sounds.mp3"></audio>
+<audio id="up" src="bounce.mp3"></audio>
+<img id="drop" src="falcon.png">
+
+</div>
+
+
+<script>
+
+function shoot(){
+        document.getElementById('bang').play();
+        var laser = document.getElementById("las");
+        var pos = 140;
+        var id = setInterval(frame, 2);
+    function frame() {
+        if(pos == 620) {
+        clearInterval(id);
+            laser.setAttribute('class', 'laser');
+            bounce();
+             drop();
+        } else {
+            pos++;
+            laser.style.left = pos + 'px';
+               
+           }
+    }
+    }
+    function bounce(){
+        var laser = document.getElementById("las");
+        var pos = 369;
+        var id = setInterval(frame, 1);
+    function frame() {
+        if(pos == -100) {
+        clearInterval(id);
+            document.getElementById("up").play();
+        } else {
+            pos--;
+            laser.style.top = pos + 'px';
+               
+           }
+    }
+    }
+    
+    function drop(){
+        var ship = document.getElementById("drop");
+        var f = document.getElementById("fata");
+        var pos = -500;
+        var id = setInterval(frame, 1);
+    function frame() {
+        if(pos == 100) {
+        clearInterval(id);
+            f.setAttribute('class', 'fata');
+        
+        } else {
+            pos++;
+            ship.style.top = pos + 'px';
+               
+           }
+    }
+    }
+
+
+
+
+</script>
+        
+    </body>
+    
+</html>
